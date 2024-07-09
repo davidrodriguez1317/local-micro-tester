@@ -1,0 +1,59 @@
+{
+  "Job": {
+    "Datacenters": [
+      "dc1"
+    ],
+    "ID": "keycloak",
+    "Name": "keycloak",
+    "TaskGroups": [
+      {
+        "Count": 1,
+        "Name": "pfg-springboot",
+        "Networks": [
+          {
+            "DynamicPorts": [
+              {
+                "HostNetwork": "default",
+                "Label": "keycloak",
+                "To": 18080,
+                "Value": 0
+              },
+              {
+                "HostNetwork": "default",
+                "Label": "callback",
+                "To": 18250,
+                "Value": 0
+              }
+            ]
+          }
+        ],
+        "Tasks": [
+          {
+            "Config": {
+              "args": [
+                "start-dev"
+              ],
+              "ports": [
+                "keycloak",
+                "callback"
+              ],
+              "image": "quay.io/keycloak/keycloak:18.0.0",
+              "network_mode": "host"
+            },
+            "Driver": "docker",
+            "Env": {
+              "KEYCLOAK_PASSWORD": "admin",
+              "KEYCLOAK_USER": "admin"
+            },
+            "Name": "keycloak",
+            "Resources": {
+              "CPU": 500,
+              "MemoryMB": 512
+            }
+          }
+        ]
+      }
+    ],
+    "Type": "service"
+  }
+}

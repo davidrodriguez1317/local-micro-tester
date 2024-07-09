@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+form {
+    margin: 1.2em;
+}
+
+.h2 {
+    margin: 1.2em 0;
+}
+
+.container-all-one-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6em;
+}
+
+.label-key-bold {
+    font-weight: bold;
+    width: 70em;
+    margin-right: 0.2em;
+}
+
+input[type="text"] {
+    width: 20em;
+    margin-left: 0.6em;
+    padding: 0.3em;
+    border-radius: 0.3em;
+    border: 0.1em solid #ccc;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.3em;
+}
+
+ul > li > span:first-child {
+    font-weight: bold;
+}
+
+span {
+    margin-right: 0.3em;
+}
+
+.key-value-entry {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.url-check {
+    margin-left: 0.6em;
+    margin-right:0.6em;
+    margin-bottom: 0;
+}
+
+.label-centered {
+    margin-bottom: 0;
+}
+
+.btn-success {
+    margin-left: 0.6em;
+    margin-right: 1.2em;
+}
+
+.medium-margin-left {
+    margin-left: 1.5em;
+}
+
+.btn {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+/* Hiding Browse button */
+.custom-file-input ~ .custom-file-label::after {
+    opacity: 0;
+    content: "";
+}
+
+.custom-file-label {
+    margin-right: 1em;
+}
+
+/* Logs have small font */
+.log-lines > p {
+    font-size: 0.6em;
+    margin-bottom: 0.1em;
+    color: blue;
+}
+
+.log-lines .odd {
+    color: darkgreen;
+}
+
+/* Line at the end of each logs div */
+.app-logs::after {
+    content: "";
+    display: block;
+    height: 2mm;
+    background-color: black;
+    margin-top: 3mm;
+}

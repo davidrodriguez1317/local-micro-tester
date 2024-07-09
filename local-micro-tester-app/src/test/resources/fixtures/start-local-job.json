@@ -1,0 +1,34 @@
+{
+  "Job": {
+    "Datacenters": [
+      "dc1"
+    ],
+    "ID": "some-job",
+    "Name": "some-job",
+    "TaskGroups": [
+      {
+        "Count": 1,
+        "Name": "pfg-springboot",
+        "Tasks": [
+          {
+            "Config": {
+              "command": "java",
+              "args": ["-jar", "/some/path/some-job-1.0.0-SNAPSHOT.jar"]
+            },
+            "Driver": "raw_exec",
+            "Env": {
+              "ENV_1" : "value1",
+              "ENV_2" : "value2"
+            },
+            "Name": "some-job",
+            "Resources": {
+              "CPU": 500,
+              "MemoryMB": 256
+            }
+          }
+        ]
+      }
+    ],
+    "Type": "service"
+  }
+}
